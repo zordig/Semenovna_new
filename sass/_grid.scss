@@ -4,10 +4,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* .wrapper {
+.wrapper {
+  height: 100%;
+  overflow: hidden;
   display: flex;
-  flex-flow: row wrap;
-} */
+  flex-direction: column;
+}
 
 .container {
   max-width: 1170px;
