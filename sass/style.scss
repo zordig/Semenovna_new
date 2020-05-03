@@ -1,0 +1,20 @@
+@import 'normalize';
+
+@import 'fonts';
+
+@import 'grid';
+
+@import 'burger';
+
+@import 'main-slider';
+
+.content {
+  width: 100%;
+  background-color: dimgray;
+}
+
+.content__text {
+  font-size: 1.4em;
+  color: rgb(255, 255, 255);
+  padding: 0 15px;
+}

@@ -1,0 +1,137 @@
+.hero-slider {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  margin: 0;
+
+  &__block {
+    min-height: 100vh;
+    object-fit: cover;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+
+    filter: blur(0) brightness(40%);
+    /* opacity: 0;
+    animation: hideImage .5s;
+    animation: hideImage .5s, scaleBackImage .5s forwards; */
+  }
+
+  &__content {
+    position: absolute;
+    height: auto;
+    display: flex;
+    /* align-items: center; */
+    flex-flow: column nowrap;
+    /* justify-content: center; */
+  }
+
+  &__title,
+  &__text {
+    font: 4em Arial, sans-serif;
+    color: rgb(250, 245, 245);
+    margin: 15px 0;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    animation: hideImage .5s, scaleBackImage .4s forwards;
+  }
+
+  &__text {
+    margin: 0 auto;
+    font: 2em Arial, sans-serif;
+    text-align: center;
+    animation: hideImage .7s, scaleBackImage .5s forwards;
+  }
+}
+
+.slick-active .hero-slider__title {
+  animation: bounceInRight 1.5s both 1.5s;
+}
+
+.slick-active .hero-slider__text {
+  animation: bounceInUp 1.5s both .5s;
+}
+
+/* .slick-active .slider__img {
+  animation: showImage .8s .5s forwards, scaleImage .5s .5s forwards;
+} */
+
+@media (max-width:767px) and (min-width:374px) {
+  .hero-slider__title {
+    font: 4em Arial, sans-serif;
+  }
+
+  .hero-slider__text {
+    font: 2em Arial, sans-serif;
+  }
+}
+
+@media (max-width:375px) {
+  .hero-slider__title {
+    font: 3em Arial, sans-serif;
+  }
+
+  .hero-slider__text {
+    font: 1.5em Arial, sans-serif;
+  }
+}
+
+/* .slick-active .slider__img {
+  animation: showImage .8s .5s forwards, scaleImage .5s .5s forwards;
+} */
+
+@keyframes showImage {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes hideImage {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleImage {
+  0% {
+    transform: scale(0);
+    transform-origin: center;
+  }
+
+  100% {
+    transform: scale(1);
+    transform-origin: center;
+  }
+}
+
+@keyframes scaleBackImage {
+  0% {
+    transform: scale(1);
+    transform-origin: center;
+  }
+
+  100% {
+    transform: scale(0);
+    transform-origin: center;
+  }
+}
